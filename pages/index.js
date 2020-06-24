@@ -1,18 +1,15 @@
-import Link from 'next/link'
+import Link from "next/link";
+import Counter from "../components/counter";
 
-export default function Home() {
-  return (
-    <ul>
-      <li>
-        <Link href="/b" as="/a">
-          <a>a</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/a" as="/b">
-          <a>b</a>
-        </Link>
-      </li>
-    </ul>
-  )
-}
+const Index = () => {
+    return (
+        <>
+            <Counter />
+            <Link href="/show-redux-state">
+                <a>Click to see current Redux State</a>
+            </Link>
+        </>
+    );
+};
+
+export default Index;
